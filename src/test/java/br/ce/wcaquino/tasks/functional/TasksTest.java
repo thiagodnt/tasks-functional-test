@@ -26,8 +26,8 @@ public class TasksTest {
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\thiago.donato\\Documents\\Computação\\Jenkins\\devops\\selenium-drivers\\chromedriver.exe");
 		//WebDriver driver = new ChromeDriver();
 		DesiredCapabilities cap = DesiredCapabilities.chrome();
-		WebDriver driver = new RemoteWebDriver(new URL("http://192.168.0.216:4444/wd/hub"), cap);
-		driver.navigate().to("http://localhost:8001/tasks");
+		WebDriver driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"), cap);
+		driver.navigate().to("http://192.168.0.216:8001/tasks");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		return driver;
 	}
